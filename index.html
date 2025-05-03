@@ -2,17 +2,54 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>الصفحة الرئيسية</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نسخة من الموقع</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>أهلاً بك في موقعي الشخصي!</h1>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About Me</a> |
-    <a href="gallery.html">Gallery</a> |
-    <a href="contact.html">Contact</a>
-  </nav>
-  <p>دي الصفحة الرئيسية للموقع بتاعي.</p>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#about">حولنا</a>
+      <a href="#services">الخدمات</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <section id="home">
+    <h1>مرحبًا بك في موقعنا</h1>
+    <p>نحن نقدم أفضل الخدمات لك.</p>
+  </section>
+
+  <section id="about">
+    <h2>عنّا</h2>
+    <p>نحن شركة تهتم بتقديم حلول مبتكرة.</p>
+  </section>
+
+  <section id="services">
+    <h2>خدماتنا</h2>
+    <ul>
+      <li>خدمة 1</li>
+      <li>خدمة 2</li>
+      <li>خدمة 3</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>تواصل معنا</h2>
+    <form>
+      <input type="text" placeholder="اسمك">
+      <input type="email" placeholder="إيميلك">
+      <textarea placeholder="رسالتك"></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>حقوق الطبع والنشر © 2025</p>
+  </footer>
+
 </body>
 </html>
