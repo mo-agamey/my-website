@@ -2,17 +2,95 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>Gallery</title>
-  <link rel="stylesheet" href="style.css">
+  <title>معرض الأعمال</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px;
+      margin: 0 10px;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+    }
+
+  </style>
 </head>
 <body>
-  <h1>معرض الأعمال</h1>
+  <h1>معرض الصور</h1>
   <nav>
     <a href="index.html">Home</a> |
     <a href="about.html">About Me</a> |
     <a href="gallery.html">Gallery</a> |
     <a href="contact.html">Contact</a>
   </nav>
-  <p>هنا هنضيف صور من شغلك المعماري... قريب جدًا 💪</p>
+  
+  <p style="text-align:center;">هيظهر هنا صور شغلي في التصميم المعماري.</p>
+
+  <div class="gallery" id="pdf-gallery"></div>
+
+  <script>
+    const gallery = document.getElementById("pdf-gallery");
+    for (let i = 1; i <= 29; i++) {
+      let num = i.toString().padStart(3, '0'); // يخلي 1 تبقى 001 وهكذا
+      let img = document.createElement("img");
+      img.src = `images/ARCH-504-page-${num}.jpg`;
+      img.alt = `Page ${i}`;
+      gallery.appendChild(img);
+    }
+  </script>
+
+  <footer>
+    <p>حقوق الطبع والنشر © 2025</p>
+  </footer>
 </body>
 </html>
